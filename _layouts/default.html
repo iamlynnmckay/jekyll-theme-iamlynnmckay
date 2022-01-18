@@ -4,8 +4,9 @@
   {%- include head.html -%}
 
   <body>
-
-    {%- include header.html -%}
+    {% if site.show_header -%}
+      {%- include header.html -%}
+    {%- endif -%}
 
     <main class="page-content" aria-label="Content">
       <div class="wrapper">
@@ -13,7 +14,9 @@
       </div>
     </main>
 
-    {%- include footer.html -%}
+    {% if site.show_footer -%}
+      {%- include footer.html -%}
+    {%- endif -%}
 
   </body>
 

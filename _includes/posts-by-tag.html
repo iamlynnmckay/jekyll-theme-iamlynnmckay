@@ -1,0 +1,36 @@
+<ul>
+    {% for tag in site.tags %}
+    <li>
+        {% capture tag_key %}{{ tag | first }}{% endcapture %}
+        <div id="{{ tag_key }}">
+            <span class="post-meta">#{{tag_key}}</span>
+        </div>
+        <ul>
+            {% for post in site.tags[tag_key] %}
+            <li>
+                <span>
+                    <a class="post-link" href="{{ post.url }}"> {{ post.title | escape }}</a>
+                </span>
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                <span class="post-meta">{{ post.date | date: date_format }}</span>
+                {%- if site.show_tags -%}
+                <br />
+                <span class="post-meta">
+                    /{% for category in post.categories %}{{ category }}{% endfor %}
+                </span>
+                <br />
+                <span class="post-meta">
+                    {% for tag in post.tags %}
+                    #{{ tag }}
+                    {% endfor %}
+                </span>
+                {%- endif -%}
+                {%- if site.show_excerpts -%}
+                {{ post.excerpt }}
+                {%- endif -%}
+            </li>
+            {% endfor %}
+        </ul>
+    </li>
+    {% endfor %}
+</ul>
