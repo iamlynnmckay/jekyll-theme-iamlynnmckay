@@ -4,6 +4,6 @@
 .sass-cache
 _site
 Gemfile.lock
-_posts/
+_posts
 *.markdown
 !_test/**

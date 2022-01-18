@@ -1,4 +1,4 @@
-.PHONY: all build serve
+.PHONY: all build serve push
 
 NAME := iamlynnmckay
 
