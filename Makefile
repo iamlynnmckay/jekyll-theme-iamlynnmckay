@@ -1,15 +1,23 @@
-.PHONY: all build serve push
+.PHONY: all build clean push serve
 
 NAME := iamlynnmckay
 
-all: build serve
+all: clean build serve
 
-build:
+build: clean
 	bundle update && \
 	bundle install && \
 	gem update jekyll-theme-$(NAME).gemspec
 	gem build jekyll-theme-$(NAME).gemspec && \
 	gem install jekyll-theme-$(NAME)
+
+clean:
+	rm -rf ./_posts ./*.markdown
+
+push: build
+	git add . ; \
+	git commit && \
+	git push origin main
 
 serve: build
 	ln -sf "$${PWD}/_test/_posts" "$${PWD}/_posts" && \
