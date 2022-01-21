@@ -14,10 +14,11 @@
 
 # config
 show_email: false
-show_excepts: false
+show_excerpts: true
 show_tags: true
 show_header: true
 show_footer: true
+show_categories: true
 show_links_on_homepage: true
 show_links_in_header: false
 show_posts: true

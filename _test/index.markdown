@@ -1,4 +1,5 @@
 ---
 layout: home
-title: coming soon...
 ---
+
+## coming soon...

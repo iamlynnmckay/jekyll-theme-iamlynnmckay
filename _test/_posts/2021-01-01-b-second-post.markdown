@@ -4,6 +4,7 @@ title: "b second post"
 date: 2021-01-01 00:00:02 -700
 categories: first/category
 tags: second-tag third-tag
+excerpt: "Doller set"
 ---
 
 See https://daringfireball.net/projects/markdown/syntax.text

@@ -1,0 +1,24 @@
+{%- if include.type == "category" -%}
+{% assign _map = site.categories %}
+{% assign _id_prefix = "category" %}
+{% assign _text_prefix = "/" %}
+{%- endif -%}
+
+{%- if include.type == "tag" -%}
+{% assign _map = site.tags %}
+{% assign _id_prefix = "tag" %}
+{% assign _text_prefix = "#" %}
+{%- endif -%}
+
+{%- if site.posts.size > 0 -%}
+<ul class="post-list">
+    {% for _key_value_pair in _map %}
+    <li>
+        {% capture _key %}{{ _key_value_pair | first }}{% endcapture %}
+        <div id="{{ _id_prefix }}-{{ _key }}" class="post-meta post-link">{{ _text_prefix }}{{ _key }}</div>
+        {% assign posts=_map[_key] %}
+        {% include posts-list.html posts=posts ul_class="no-bullet" size=include.size %}
+    </li>
+    {% endfor %}
+</ul>
+{%- endif -%}

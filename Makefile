@@ -24,4 +24,5 @@ serve: build
 	ln -sf "$${PWD}/_test/404.markdown" "$${PWD}/404.markdown" && \
 	ln -sf "$${PWD}/_test/about.markdown" "$${PWD}/about.markdown" && \
 	ln -sf "$${PWD}/_test/index.markdown" "$${PWD}/index.markdown" && \
+	ln -sf "$${PWD}/_test/blog.markdown" "$${PWD}/blog.markdown" && \
 	bundle exec jekyll serve

@@ -1,0 +1,8 @@
+{%- if include.posts.size > 0 -%}
+{% assign ul_class = include.ul_class | "no-bullet" %}
+<ul class="{{ ul_class }}">
+  {%- for post in include.posts -%}
+    {% include post-item-proxy.html size=include.size post=post %}
+  {%- endfor -%}
+</ul>
+{%- endif -%}
