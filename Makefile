@@ -12,7 +12,7 @@ build: clean
 	gem install jekyll-theme-$(NAME)
 
 clean:
-	rm -rf ./_posts ./*.markdown
+	rm -rf ./_posts ./*.markdown ./assets/posts
 
 push: build
 	git add . ; \
@@ -25,4 +25,5 @@ serve: build
 	ln -sf "$${PWD}/_test/about.markdown" "$${PWD}/about.markdown" && \
 	ln -sf "$${PWD}/_test/index.markdown" "$${PWD}/index.markdown" && \
 	ln -sf "$${PWD}/_test/blog.markdown" "$${PWD}/blog.markdown" && \
+	ln -sf "$${PWD}/_test/assets/posts" "$${PWD}/assets/posts" && \
 	bundle exec jekyll serve
