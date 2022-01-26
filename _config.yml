@@ -52,6 +52,10 @@ plugins:
   # - jekyll-scholar
   # - jekyll-postcss
 
+include: 
+  - '_pages'
+  - '_pages/debug'
+
 # exclude
 exclude:
   - .gitignore
@@ -62,6 +66,7 @@ exclude:
   - Makefile
   - README.md
   - _test/
+  - assets/posts
   - gemfiles/
   - netlify.toml
   - node_modules/
