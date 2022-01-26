@@ -12,7 +12,7 @@ build: clean
 	gem install jekyll-theme-$(NAME)
 
 clean:
-	rm -rf ./_posts ./*.markdown ./assets/posts
+	rm -rf ./_posts ./*.markdown ./assets/posts _pages _site
 
 push: build
 	git add . ; \

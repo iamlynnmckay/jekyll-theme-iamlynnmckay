@@ -5,4 +5,4 @@ permalink: /debug
 tags: debug
 ---
 
-{% include list-of-pages.html %}
+{% include links.html %}

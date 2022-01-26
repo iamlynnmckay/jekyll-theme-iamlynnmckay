@@ -1,8 +1,7 @@
 ---
 layout: page
 title: Hello World
-permalink: /debug/hello-world.html
-category: /public/debug
+permalink: /debug/hello-world
 tags: debug hello-world
 ---
 
