@@ -4,3 +4,7 @@ permalink: /
 ---
 
 ## coming soon...
+
+---
+
+{{ site | inspect }}
