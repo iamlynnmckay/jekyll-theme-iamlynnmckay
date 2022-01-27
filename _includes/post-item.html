@@ -3,20 +3,7 @@
     <a href="{{ include.url | relative_url }}">
         {{ include.title | escape }}
     </a>
-    <span class="post-meta">{{ include.date | date: "%b %-d, %Y" }}</span>
-    {%- if site.show_categories -%}
-    <br />
-    <span class="post-meta">
-        /{% for category in include.categories %}{{ category }}{% endfor %}
-    </span>
-    {%- endif -%}
-    {%- if site.show_tags -%}
-    <span class="post-meta">
-        {% for tag in include.tags %}
-        #{{ tag }}
-        {% endfor %}
-    </span>
-    {%- endif -%}
+    {% include post-meta.html date=include.date categories=include.categories tags=include.tags excerpt=include.excerpt %}
 </li>
 {%- endif -%}
 {%- if include.size == "large" -%}
@@ -24,25 +11,6 @@
     <a class="post-link" href="{{ include.url | relative_url }}">
         {{ include.title | escape }}
     </a>
-    <span class="post-meta">{{ include.date | date: "%b %-d, %Y" }}</span>
-    {%- if site.show_categories -%}
-    <br />
-    <span class="post-meta">
-        /{% for category in include.categories %}{{ category }}{% endfor %}
-    </span>
-    {%- endif -%}
-    {%- if site.show_tags -%}
-    <br />
-    <span class="post-meta">
-        {% for tag in include.tags %}
-        #{{ tag }}
-        {% endfor %}
-    </span>
-    {%- endif -%}
-    {%- if site.show_excerpts -%}
-    <p>
-        {{ include.excerpt }}
-    </p>
-    {%- endif -%}
+    {% include post-meta.html date=include.date categories=include.categories tags=include.tags excerpt=include.excerpt %}
 </li>
 {%- endif -%}

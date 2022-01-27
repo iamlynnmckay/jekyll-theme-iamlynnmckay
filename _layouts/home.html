@@ -2,15 +2,4 @@
 layout: default
 ---
 
-<div class="home">
-  {%- if page.title -%}
-  <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {%- if site.show_links_on_homepage -%}
-    {%- include links.html -%}
-  {%- endif -%}
-
-  {{ content }}
-
-</div>
+{% include home-template.html %}

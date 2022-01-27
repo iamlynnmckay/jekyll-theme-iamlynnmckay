@@ -5,4 +5,4 @@ permalink: /debug/nested-debug
 tags: debug nested
 ---
 
-{% include links.html %}
+foo

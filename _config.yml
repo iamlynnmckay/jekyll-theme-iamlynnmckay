@@ -23,6 +23,7 @@ show_links_on_homepage: true
 show_links_in_header: false
 show_posts: true
 
+theme: jekyll-theme-iamlynnmckay
 
 # minima
 email: iamlynnmckay@gmail.com
@@ -54,7 +55,8 @@ plugins:
 
 include: 
   - '_pages'
-  - '_pages/debug'
+  - 'assets/pages'
+  - 'assets/pages/debug'
 
 # exclude
 exclude:

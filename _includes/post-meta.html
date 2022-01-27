@@ -1,0 +1,10 @@
+{% include post-date.html date=include.date %}
+<br />
+{% include post-categories.html categories=include.categories %}
+<br />
+{% include post-tags.html tags=include.tags %}
+{%- if include.excerpt != '' -%}
+<p>
+    {{ include.excerpt }}
+</p>
+{%- endif -%}

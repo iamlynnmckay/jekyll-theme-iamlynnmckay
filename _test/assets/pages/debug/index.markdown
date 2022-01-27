@@ -5,4 +5,4 @@ permalink: /debug
 tags: debug
 ---
 
-{% include links.html %}
+bar

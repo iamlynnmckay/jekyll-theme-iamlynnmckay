@@ -3,5 +3,6 @@ layout: home
 permalink: /
 ---
 
-## coming soon...
-
+- [/blog](/blog)
+- [/about](/about)
+- [/debug](/debug)
