@@ -1,16 +1,6 @@
-{%- if include.size == "small" -%}
-<li>
-    <a href="{{ include.url | relative_url }}">
-        {{ include.title | escape }}
-    </a>
-    {% include post-meta.html date=include.date categories=include.categories tags=include.tags excerpt=include.excerpt %}
-</li>
-{%- endif -%}
-{%- if include.size == "large" -%}
 <li>
     <a class="post-link" href="{{ include.url | relative_url }}">
         {{ include.title | escape }}
     </a>
     {% include post-meta.html date=include.date categories=include.categories tags=include.tags excerpt=include.excerpt %}
 </li>
-{%- endif -%}

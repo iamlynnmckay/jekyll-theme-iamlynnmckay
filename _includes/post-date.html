@@ -1,3 +1,5 @@
-<time class="dt-published post-meta" datetime="{{ include.date | date_to_xmlschema }}" itemprop="datePublished">
+<span>
+<time class="dt-published" datetime="{{ include.date | date_to_xmlschema }}" itemprop="datePublished">
   {{ include.date | date: "%b %-d, %Y" }}
 </time>
+</span>

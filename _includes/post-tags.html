@@ -1,4 +1,4 @@
-<span class="post-meta">
+<span>
     {% for tag in include.tags %}
     {% capture _link %}./blog#tag-{{ tag }}{% endcapture %}
     <a href="{{ _link | relative_url }}">#{{ tag }}</a>

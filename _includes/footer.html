@@ -1,23 +1,23 @@
 <footer class="site-footer h-card">
   <data class="u-url" href="{{ " /" | relative_url }}"></data>
-  <div class="wrapper">
+  <div>
     <h2 class="footer-heading">{{ site.title | escape }}</h2>
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-        <br/>
-      </div>
-      <div class="footer-col footer-col-2">
         <ul class="contact-list">
           <li class="rss-subscribe">
             <i class="fas fa-rss"></i>
             Subscribe <a href="{{ " /feed.xml" | relative_url }}">via RSS</a>
           </li>
           <li>
-            <i class="fas fa-rss"></i>
-            DM me on 
-            <a href="https://twitch.com/{{ site.twitter.username }}"></i>Twitter</a>
+            <i class="fab fa-twitter"></i>
+            Find me on 
+            <a href="https://twitter.com/{{ site.twitter.username }}"></i>Twitter</a>
           </li>
         </ul>
+      </div>
+      <div class="footer-col footer-col-2">
+        <br/>
       </div>
       <div class="footer-col footer-col-3">
         {%- include social.html -%}

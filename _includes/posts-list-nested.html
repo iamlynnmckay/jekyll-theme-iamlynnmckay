@@ -3,9 +3,9 @@
     {% for _key_value_pair in include.nested_posts %}
     <li>
         {% capture _key %}{{ _key_value_pair | first }}{% endcapture %}
-        <div id="{{ include.id_prefix }}-{{ _key }}" class="post-meta post-link">{{ include.text_prefix }}{{ _key }}</div>
+        <div id="{{ include.id_prefix }}-{{ _key }}" class="post-link post-meta">{{ include.text_prefix }}{{ _key }}</div>
         {% assign posts=include.nested_posts[_key] %}
-        {% include posts-list.html posts=posts ul_class="list-style-type-none" size=include.size %}
+        {% include posts-list.html posts=posts ul_class="list-style-none" size=include.size %}
     </li>
     {% endfor %}
 </ul>

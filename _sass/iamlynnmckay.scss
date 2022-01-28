@@ -24,25 +24,14 @@ $on-laptop:        800px;
 
 $code-background-color: lighten($background-color, 5%); 
 
-@import "minima";
+@import "minima-custom";
 
-.site-title {
+hr {
+  margin-bottom: 1em;
+}
+
+body > header > div > a {
     color:rgb(255, 121, 150);
-}
-
-pre,
-code {
-  border: 0px;
-  background-color: $code-background-color;
-  // text-shadow: 0 0 15px lighten($code-background-color, 15%);
-}
-
-.highlight {
-    background: $code-background-color;
-    .highlighter-rouge & {
-      background: $code-background-color;
-    }
-  
 }
 
 .site-footer {
@@ -53,16 +42,19 @@ code {
   margin-bottom: - ($spacing-unit / 2);
 }
 
-.social-media-list li {
+.x-social-media-list li {
   display: inline;
 }
 
-.social-media-list a {
+.x-social-media-list a {
   color: $grey-color !important;
 }
 
-.social-media-list a:hover {
+.x-social-media-list a:hover {
   color: $grey-color-light !important;
+}
+.post-meta {
+  color: $grey-color !important;
 }
 
 .post-meta a {
@@ -76,10 +68,18 @@ code {
 // custom
 
 
-ul.list-style-type-none {
-  list-style-type: none; /* Remove bullets */
+ul.list-style-none {
+  list-style: none; /* Remove bullets */
 }
 
 .margin-left-0 {
   margin-left: 0;
+}
+
+.x-text-align-center {
+  text-align: center;
+}
+
+.x-font-size-4x-base {
+  font-size: 4 * $base-font-size;
 }
