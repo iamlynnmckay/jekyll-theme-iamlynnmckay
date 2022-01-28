@@ -56,7 +56,6 @@ plugins:
 include: 
   - '_pages'
   - 'assets/pages'
-  - 'assets/pages/debug'
 
 # exclude
 exclude:

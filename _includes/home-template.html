@@ -6,7 +6,14 @@
   {{ site.description }}
   </p>
   <hr>
+  <ul>
+    <li><a href="/about">/about</a></li>
+    <li><a href="/contact">/contact</a></li>
+    <li><a href="/blog">/blog</a></li>
+    <li><a href="/debug">/debug</a></li>
+  </ul>
   {{ content }}
   <hr>
-  {%- include posts-by-date.html %}
+  {%- include posts-by-date-top-three.html %}
+  <a href="/blog">more...</a>
 </div>

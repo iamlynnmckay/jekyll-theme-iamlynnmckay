@@ -45,10 +45,6 @@ code {
   
 }
 
-ul.no-bullet {
-  list-style-type: none; /* Remove bullets */
-}
-
 .site-footer {
   padding: $spacing-unit / 2;
 }
@@ -77,4 +73,13 @@ ul.no-bullet {
   color: $grey-color-light !important;
 }
 
+// custom
 
+
+ul.list-style-type-none {
+  list-style-type: none; /* Remove bullets */
+}
+
+.margin-left-0 {
+  margin-left: 0;
+}

@@ -24,7 +24,6 @@ clean:
 		Gemfile.lock \
 		*.gem \
 		_posts \
-		_pages \
 		*.markdown \
 		assets/posts \
 		assets/pages
@@ -37,7 +36,6 @@ push: build
 serve: build link exec
 
 link:
-	ln -sf "$${PWD}/_test/_pages" "$${PWD}/_pages" && \
 	ln -sf "$${PWD}/_test/_posts" "$${PWD}/_posts" && \
 	ln -sf "$${PWD}/_test/404.markdown" "$${PWD}/404.markdown" && \
 	ln -sf "$${PWD}/_test/index.markdown" "$${PWD}/index.markdown" && \
