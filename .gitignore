@@ -1,10 +1,9 @@
-*.markdown
 .bundle
 .jekyll-cache
 .sass-cache
 Gemfile.lock
 _posts
 _site
-assets/posts/
 assets/pages/
+assets/posts/
 !_test/**

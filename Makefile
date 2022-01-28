@@ -17,16 +17,15 @@ gem:
 
 clean:
 	rm -rf \
+		*.gem \
 		.bundle \
 		.jekyll-cache \
 		.sass-cache \
-		_site \
 		Gemfile.lock \
-		*.gem \
 		_posts \
-		*.markdown \
-		assets/posts \
-		assets/pages
+		_site \
+		assets/pages \
+		assets/posts 
 
 push: build
 	git add . ; \
@@ -37,8 +36,6 @@ serve: build link exec
 
 link:
 	ln -sf "$${PWD}/_test/_posts" "$${PWD}/_posts" && \
-	ln -sf "$${PWD}/_test/404.markdown" "$${PWD}/404.markdown" && \
-	ln -sf "$${PWD}/_test/index.markdown" "$${PWD}/index.markdown" && \
 	cp -rf "$${PWD}/_test/assets/posts" "$${PWD}/assets/posts" && \
 	cp -rf "$${PWD}/_test/assets/pages" "$${PWD}/assets/pages"
 
