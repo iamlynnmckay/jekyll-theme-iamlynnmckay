@@ -53,16 +53,34 @@ body > header > div > a {
 .x-social-media-list a:hover {
   color: $grey-color-light !important;
 }
-.post-meta {
+
+.x-post-meta > span {
+  font-size: $small-font-size;
   color: $grey-color !important;
 }
 
-.post-meta a {
+.x-post-meta a {
   color: $grey-color !important;
 }
 
-.post-meta a:hover {
+.x-post-meta a:hover {
   color: $grey-color-light !important;
+}
+
+.x-post-link > span {
+  display: block;
+  @include relative-font-size(1.5);
+}
+
+.x-post-list {
+  margin-left: 0;
+  list-style: none;
+
+  li {
+    margin-top: $spacing-unit / 2;
+    margin-bottom: $spacing-unit / 2;
+  }
+
 }
 
 // custom

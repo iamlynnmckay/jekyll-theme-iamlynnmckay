@@ -1,6 +1,6 @@
 <li>
-    <a class="post-link" href="{{ include.url | relative_url }}">
-        {{ include.title | escape }}
+    <a class="x-post-link" href="{{ include.url | relative_url }}">
+        <span>{{ include.title | escape }}</span>
     </a>
     {% include post-meta.html date=include.date categories=include.categories tags=include.tags excerpt=include.excerpt %}
 </li>

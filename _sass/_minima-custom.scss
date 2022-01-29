@@ -551,15 +551,16 @@ main {
   }
 }
 
-.post-meta {
-  font-size: $small-font-size;
-  color: $grey-color;
-}
+/// @iamlynnmckay
+/// .post-meta {
+///   font-size: $small-font-size;
+///   color: $grey-color;
+/// }
 
-.post-link {
-  display: block;
-  @include relative-font-size(1.5);
-}
+/// .post-link {
+///   display: block;
+///   @include relative-font-size(1.5);
+/// }
 
 
 
