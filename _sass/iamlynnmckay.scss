@@ -101,3 +101,9 @@ ul.list-style-none {
 .x-font-size-4x-base {
   font-size: 4 * $base-font-size;
 }
+
+.contact-template > form > input.input-text {
+  width: $content-width;
+  height: $content-width / 2;
+  background-color: $background-color;
+}
