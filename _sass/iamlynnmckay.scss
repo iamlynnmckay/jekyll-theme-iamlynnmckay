@@ -107,3 +107,60 @@ ul.list-style-none {
   height: $content-width / 2;
   background-color: $background-color;
 }
+
+
+.x-home-template-image {
+  background-image: url("/assets/pages/home/header-image.jpg"); /* The image used - important! */
+  background-size: cover;
+  position: relative; /* Needed to position the cutout text in the middle of the image */
+  height: 300px; /* Some height */
+}
+
+.x-home-template-description {
+  background-color: white;
+  color: black;
+  font-size: $base-font-size * 2; /* Responsive font size */
+  font-weight: bold;
+  margin: 0 auto; /* Center the text container */
+  padding: 10px;
+  width: 50%;
+  text-align: center; /* Center text */
+  position: absolute; /* Position text */
+  top: 50%; /* Position text in the middle */
+  left: 50%; /* Position text in the middle */
+  transform: translate(-50%, -50%); /* Position text in the middle */
+  mix-blend-mode: screen; /* This makes the cutout text possible */
+}
+
+.x-home-template-pages {
+  a {
+
+    font-size: $base-font-size * 1.5;
+  }
+  ul {
+    list-style: none;
+    margin-left: 50px;
+    margin-bottom: 50px;
+  }
+  ul:first-child {
+    margin-top: 50px;
+    margin-bottom: 0;
+  }
+}
+
+.x-home-template-posts {
+    margin: 50px;
+
+}
+
+.x-home-template-canvas > canvas {
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: block;
+  width: $content-width - ($content-width / 3);
+  height: $content-width / 8;
+}

@@ -9,6 +9,9 @@ excerpt: ""
 
 
 <canvas id="canvas" width="300"></canvas>
+<div class="x-home-template-canvas">
+<canvas id="canvas"></canvas>
+</div>
 
 <script src="/assets/js/random-color-for-font-awesome-icons.js"></script>
 <script src="/assets/js/bouncing-ball-in-canvas-element.js"></script>

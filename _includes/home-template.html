@@ -1,16 +1,20 @@
 {%- if page.title -%}
 <h1>{{ page.title }}</h1>
 {%- endif -%}
-<p>
-  {{ site.description }}
-</p>
-<hr>
-<ul class="list-style-none margin-left-0">
+<div class="x-home-template-image">
+  <div class="x-home-template-description">{{site.description}}</div>
+</div>
+<div class="x-home-template-pages">
+<ul>
   <li><a href="/about">/about</a></li>
   <li><a href="/contact">/contact</a></li>
   <li><a href="/blog">/blog</a></li>
   <li><a href="/debug">/debug</a></li>
 </ul>
+{{ content }}
+</div>
 <hr>
+<div class="x-home-template-posts">
 {%- include posts-by-date-top-three.html %}
 <a href="/blog">more...</a>
+</div>
