@@ -1,12 +1,17 @@
 
-# config
+# jekyll-theme-iamlynnmckay
+show_coming_soon: false
 show_email: false
 show_excerpts: true
 show_tags: true
 show_header: true
 show_footer: true
 show_categories: true
-show_links_on_homepage: true
+show_homepage_links: true
+homepage_links:
+  - 'about'
+  - 'contact'
+  - 'blog'
 show_links_in_header: false
 show_posts: true
 
@@ -22,7 +27,7 @@ github_username:  iamlynnmckay
 author: "Lynn McKay"
 url: "https://iamlynnmckay.com"
 title: "@iamlynnmckay"
-description: "Lynn's blog about things and stuff."
+description: "Lynn's things and stuff."
 twitter:
   username: "iamlynnmckay"
   card: "site.twitter.card"

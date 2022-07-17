@@ -4,7 +4,7 @@
     <h2 class="footer-heading">{{ site.title | escape }}</h2>
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
-        <ul class="contact-list">
+        <ul class="x-contact-list">
           <li class="rss-subscribe">
             <i class="fas fa-rss"></i>
             Subscribe <a href="{{ " /feed.xml" | relative_url }}">via RSS</a>
@@ -20,7 +20,10 @@
         <br/>
       </div>
       <div class="footer-col footer-col-3">
-        {%- include social.html -%}
+        <ul>
+        <li>{%- include social.html -%}</li>
+        <li><a class="x-sitemap-link" href="/sitemap.xml">sitemap.xml</a></li>
+        </ul>
       </div>
     </div>
   </div>

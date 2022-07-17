@@ -1,0 +1,12 @@
+---
+#layout: about
+title: about
+permalink: /about/
+layout: post
+date: 2021-01-01 00:00:01 -700
+categories: zeroth
+tags: first-tag second-tag
+excerpt: "Lorem ipsum"
+---
+{%- include about-template.html -%}
+

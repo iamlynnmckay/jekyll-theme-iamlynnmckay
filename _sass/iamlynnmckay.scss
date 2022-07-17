@@ -9,11 +9,13 @@ $spacing-unit:     30px;
 
 $text-color:       rgb(255, 255, 255);
 $background-color: #1d1d1d;
-$brand-color:      #61a6ff;
+$brand-color:      #f171ab;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+
+$border-color: $text-color;
 
 $table-text-align: left;
 
@@ -31,7 +33,7 @@ hr {
 }
 
 body > header > div > a {
-    color:rgb(255, 121, 150);
+    color: $brand-color
 }
 
 .site-footer {
@@ -40,6 +42,11 @@ body > header > div > a {
 
 .footer-col {
   margin-bottom: - ($spacing-unit / 2);
+}
+
+.footer-col > ul {
+  list-style: none;
+  margin-left: 0;
 }
 
 .x-social-media-list li {
@@ -52,6 +59,10 @@ body > header > div > a {
 
 .x-social-media-list a:hover {
   color: $grey-color-light !important;
+}
+
+.x-sitemap-link { 
+  margin-left: 30px;
 }
 
 .x-post-meta > span {
@@ -83,8 +94,18 @@ body > header > div > a {
 
 }
 
+.x-posts-by-date > li {
+  margin-left: 1em;
+}
+.x-page-list {
+  padding-bottom: 50px;
+}
+
 // custom
 
+.x-coming-soon {
+  margin: 50px;
+}
 
 ul.list-style-none {
   list-style: none; /* Remove bullets */
@@ -164,3 +185,98 @@ ul.list-style-none {
   width: $content-width - ($content-width / 3);
   height: $content-width / 8;
 }
+
+.x-nav-links > li {
+  display: inline;
+}
+
+
+
+.site-nav {
+  position: absolute;
+  top: 9px;
+  padding-top: 0;
+  right: $spacing-unit / 2;
+  background-color: $background-color;
+  text-align: right;
+  z-index: 2;
+  .nav-trigger {
+    display: none;
+  }
+
+  .menu-icon {
+    float: right;
+    width: 36px;
+    height: 26px;
+    line-height: 0;
+    padding-top: 10px;
+    text-align: center;
+    > svg path {
+      fill: $border-color;
+    }
+  }
+
+  label[for="nav-trigger"] {
+    display: block;
+    float: right;
+    width: 36px;
+    height: 36px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  input ~ .trigger {
+    clear: both;
+    display: none;
+  }
+
+  input:checked ~ .trigger {
+    display: block;
+    padding-bottom: 5px;
+  }
+
+  .page-link {
+    color: $text-color;
+    line-height: $base-line-height;
+    display: block;
+    padding: 5px 10px;
+    // Gaps between nav items, but not on the last one
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+    margin-left: 20px;
+  }
+
+  @media screen and (min-width: $on-palm) {
+    position: static;
+    float: right;
+    border: none;
+    background-color: inherit;
+    padding-top: 16px;
+
+    label[for="nav-trigger"] {
+      display: none;
+    }
+
+    
+
+    .menu-icon {
+      display: none;
+    }
+
+    input ~ .trigger {
+      display: block;
+    }
+
+    .page-link {
+      display: inline;
+      padding: 0;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+      margin-left: auto;
+    }
+  }
+}
+

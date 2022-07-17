@@ -1,0 +1,12 @@
+---
+#layout: contact
+title: contact
+permalink: /contact/
+layout: post
+date: 2021-01-01 00:00:01 -700
+categories: first
+tags: first-tag second-tag
+excerpt: "Lorem ipsum"
+---
+
+{%- include contact-template.html -%}

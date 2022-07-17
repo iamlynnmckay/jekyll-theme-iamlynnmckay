@@ -4,17 +4,20 @@
 <div class="x-home-template-image">
   <div class="x-home-template-description">{{site.description}}</div>
 </div>
+{%- if site.show_coming_soon -%}
+<h2 class="x-coming-soon">
+more coming soon...
+</h2>
+{%- else -%}
 <div class="x-home-template-pages">
-<ul>
-  <li><a href="/about">/about</a></li>
-  <li><a href="/contact">/contact</a></li>
-  <li><a href="/blog">/blog</a></li>
-  <li><a href="/debug">/debug</a></li>
-</ul>
+{%- if site.show_homepage_links -%}
+{%- include list-of-homepage-links.html -%}
+{%- endif -%}
 {{ content }}
 </div>
 <hr>
 <div class="x-home-template-posts">
-{%- include posts-by-date-top-three.html %}
+{%- include posts-by-date-top-three.html -%}
 <a href="/blog">more...</a>
 </div>
+{%- endif -%}
