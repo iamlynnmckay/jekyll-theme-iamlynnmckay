@@ -5,15 +5,11 @@
   <div class="x-home-template-description">{{site.description}}</div>
 </div>
 {%- if site.show_coming_soon -%}
-<h2 class="x-coming-soon">
-more coming soon...
-</h2>
 {%- else -%}
 <div class="x-home-template-pages">
 {%- if site.show_homepage_links -%}
 {%- include list-of-homepage-links.html -%}
 {%- endif -%}
-{{ content }}
 </div>
 <hr>
 <div class="x-home-template-posts">
@@ -21,3 +17,5 @@ more coming soon...
 <a href="/blog">more...</a>
 </div>
 {%- endif -%}
+
+{{ content }}

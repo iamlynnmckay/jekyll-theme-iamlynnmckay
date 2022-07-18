@@ -3,4 +3,10 @@ layout: home
 permalink: /
 ---
 
-[linktr.ee/iamlynnmckay](https://linktr.ee/iamlynnmckay)
+<br/>
+
+## [linktr.ee/iamlynnmckay](https://linktr.ee/iamlynnmckay)
+
+---
+
+### more coming soon...

@@ -1,6 +1,7 @@
 .PHONY: all build clean push serve
 
 NAME := iamlynnmckay
+VERSION := 0.0.8
 
 all: clean build serve
 
@@ -10,10 +11,11 @@ bundle:
 	bundle update && \
 	bundle install
 
-gem: 
+gem: clean bundle
 	gem update jekyll-theme-$(NAME).gemspec && \
 	gem build jekyll-theme-$(NAME).gemspec && \
-	gem install jekyll-theme-$(NAME)
+	gem install jekyll-theme-$(NAME) && \
+	gem push jekyll-theme-$(NAME)-$(VERSION).gem
 
 clean:
 	rm -rf \

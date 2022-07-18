@@ -1,6 +1,6 @@
 
 # jekyll-theme-iamlynnmckay
-show_coming_soon: false
+show_coming_soon: true
 show_email: false
 show_excerpts: true
 show_tags: true
