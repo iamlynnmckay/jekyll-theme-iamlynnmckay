@@ -366,9 +366,17 @@ body > header > div > a {
   margin-bottom: 0;
   float: left;
 
-  &,
+  // @TODO: This is just the same as above for a!
+  color: $brand-color;
+  text-decoration: none;
+
   &:visited {
-    color: $grey-color-dark;
+    color: darken($brand-color, 15%);
+  }
+
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
   }
 }
 
