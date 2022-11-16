@@ -7,3 +7,4 @@ _site
 assets/pages/
 assets/posts/
 !_test/**
+vendor

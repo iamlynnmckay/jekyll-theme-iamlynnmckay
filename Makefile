@@ -1,23 +1,25 @@
 .PHONY: all build clean push serve
 
 NAME := iamlynnmckay
-VERSION := 0.0.8
+VERSION := 0.0.9
 
 all: clean build serve
 
 build: clean bundle
 
 bundle:
+	bundle config set --local path 'vendor/bundle' && \
 	bundle update && \
 	bundle install
 
 gem: clean bundle
 	gem update jekyll-theme-$(NAME).gemspec && \
 	gem build jekyll-theme-$(NAME).gemspec && \
-	gem install jekyll-theme-$(NAME) && \
+	gem install jekyll-theme-$(NAME) --user-install && \
 	gem push jekyll-theme-$(NAME)-$(VERSION).gem
 
 clean:
+	gem clean && \
 	rm -rf \
 		*.gem \
 		.bundle \
