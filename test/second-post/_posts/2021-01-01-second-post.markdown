@@ -7,3 +7,5 @@ excerpt: "Doller set"
 ---
 
 bar
+
+![](./test.jpg)
