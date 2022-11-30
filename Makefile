@@ -1,6 +1,6 @@
 .PHONY: all build clean push serve
 
-NAME := iamlynnmckay
+NAME := jekyll-theme-iamlynnmckay
 VERSION := 0.0.10
 
 all: clean build serve
@@ -13,10 +13,10 @@ bundle:
 	bundle install
 
 gem: clean bundle
-	gem update jekyll-theme-$(NAME).gemspec && \
-	gem build jekyll-theme-$(NAME).gemspec && \
-	gem install jekyll-theme-$(NAME) --user-install && \
-	gem push jekyll-theme-$(NAME)-$(VERSION).gem
+	gem update $(NAME).gemspec && \
+	gem build $(NAME).gemspec && \
+	gem install $(NAME) --user-install && \
+	gem push $(NAME)-$(VERSION).gem
 
 clean:
 	gem clean && \
@@ -26,10 +26,7 @@ clean:
 		.jekyll-cache \
 		.sass-cache \
 		Gemfile.lock \
-		_posts \
-		_site \
-		assets/pages \
-		assets/posts 
+		_site
 
 push: build
 	git add . ; \

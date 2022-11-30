@@ -2,9 +2,5 @@
 .jekyll-cache
 .sass-cache
 Gemfile.lock
-_posts
 _site
-assets/pages/
-assets/posts/
-!_test/**
 vendor
