@@ -1,0 +1,12 @@
+{%- if site.posts.size > 0 -%}
+{% assign ul_class = include.ul_class | default: "x-post-list" %}
+<ul class="{{ ul_class }}">
+  {%- for page in site.pages -%}
+<li>
+    <a class="x-post-link" href="{{ page.url | relative_url }}">
+        <span>{{ page.title | escape }}</span>
+    </a>
+</li>
+  {%- endfor -%}
+</ul>
+{%- endif -%}

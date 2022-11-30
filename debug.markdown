@@ -1,13 +1,10 @@
 ---
-layout: post
-title: "b second post"
-date: 2021-01-01 00:00:02 -700
-categories: first/category
-tags: second-tag third-tag
-excerpt: "Doller set"
+title: debug
+layout: page
+tags: debug
 ---
 
-See https://daringfireball.net/projects/markdown/syntax.text
+The following document is an unmodified copy of https://daringfireball.net/projects/markdown/syntax.text used here for testing purposes.
 
 ---
 
@@ -907,4 +904,3 @@ Markdown provides backslash escapes for the following characters:
 	-	minus sign (hyphen)
     .   dot
     !   exclamation mark
-

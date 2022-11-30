@@ -1,5 +1,0 @@
-<span class="post-meta">
-    {% capture _categories %}{% for category in include.categories %}{{ category }}{% endfor %}{% endcapture %}
-    {% capture _link %}./blog#category-{{ _categories }}{% endcapture %}
-    <a href="{{ _link | relative_url }}">/{{ _categories }}</a>
-</span>

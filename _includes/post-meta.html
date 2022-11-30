@@ -1,9 +1,22 @@
 <div class="x-post-meta">
-{% include post-date.html date=include.date %}
+{%- if include.date != '' -%}
+<span>
+<time class="dt-published" datetime="{{ include.date | date_to_xmlschema }}" itemprop="datePublished">
+  {{ include.date | date: "%b %-d, %Y" }}
+</time>
+</span>
+{%- endif -%}
 <br />
-{% include post-categories.html categories=include.categories %}
+<span class="post-meta">
+    {% capture _categories %}{% for category in include.categories %}{{ category }}/{% endfor %}{% endcapture %}
+    <a href="{{ _categories }}">/{{ _categories }}</a>
+</span>
 <br />
-{% include post-tags.html tags=include.tags %}
+<span>
+    {% for tag in include.tags %}
+    #{{ tag }}
+    {% endfor %}
+</span>
 {%- if include.excerpt != '' -%}
 <p>
     {{ include.excerpt }}

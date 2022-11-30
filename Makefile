@@ -1,7 +1,7 @@
 .PHONY: all build clean push serve
 
 NAME := iamlynnmckay
-VERSION := 0.0.9
+VERSION := 0.0.10
 
 all: clean build serve
 
@@ -36,12 +36,7 @@ push: build
 	git commit && \
 	git push origin main
 
-serve: build link exec
-
-link:
-	ln -sf "$${PWD}/_test/_posts" "$${PWD}/_posts" && \
-	cp -rf "$${PWD}/_test/assets/posts" "$${PWD}/assets/posts" && \
-	cp -rf "$${PWD}/_test/assets/pages" "$${PWD}/assets/pages"
+serve: build exec
 
 exec:
 	bundle exec jekyll serve

@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-iamlynnmckay"
-  spec.version       = "0.0.9"
+  spec.version       = "0.0.10"
   spec.authors       = ["Lynn McKay"]
   spec.email         = ["iamlynnmckay@gmail.com"]
 
@@ -19,7 +19,6 @@ Gem::Specification.new do |spec|
   # spec.add_runtime_dependency "jekyll-postcss"
   spec.add_runtime_dependency "jekyll-seo-tag"#, "~> 2.1"
   spec.add_runtime_dependency "jekyll-sitemap"
-  # spec.add_runtime_dependency "jekyll-scholar"
 
   spec.add_runtime_dependency "webrick"#, "~> 1.7"
 

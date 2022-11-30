@@ -2,7 +2,12 @@
 {% assign ul_class = include.ul_class | default: "x-post-list" %}
 <ul class="{{ ul_class }}">
   {%- for post in include.posts -%}
-    {% include post-item-proxy.html size=include.size post=post %}
+<li>
+    <a class="x-post-link" href="{{ post.url | relative_url }}">
+        <span>{{ post.title | escape }}</span>
+    </a>
+    {% include post-meta.html date=post.date categories=post.categories tags=post.tags excerpt=post.excerpt %}
+</li>
   {%- endfor -%}
 </ul>
 {%- endif -%}

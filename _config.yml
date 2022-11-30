@@ -9,9 +9,9 @@ show_footer: true
 show_categories: true
 show_homepage_links: true
 homepage_links:
-  - 'about'
-  - 'contact'
-  - 'blog'
+  - 'posts'
+  - 'pages'
+  - 'debug'
 show_links_in_header: false
 show_posts: true
 
@@ -27,28 +27,17 @@ github_username:  iamlynnmckay
 author: "Lynn McKay"
 url: "https://iamlynnmckay.com"
 title: "@iamlynnmckay"
-description: "Lynn's things and stuff."
 twitter:
   username: "iamlynnmckay"
   card: "site.twitter.card"
 logo: "assets/images/logo.svg"
-
-# jekyll-scholar
-scholar:
-  style: apa
 
 # plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  # - jekyll-scholar
   # - jekyll-postcss
-
-include: 
-  - '_pages'
-  - 'assets/pages'
-  - 'assets/posts'
 
 # exclude
 exclude:
@@ -59,8 +48,6 @@ exclude:
   - Gemfile.lock
   - Makefile
   - README.md
-  - _test/
-  - assets/posts
   - gemfiles/
   - netlify.toml
   - node_modules/

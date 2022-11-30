@@ -1,8 +1,0 @@
-{%- if site.homepage_links.size > 0 -%}
-{% assign ul_class = include.ul_class | default: "x-page-list" %}
-<ul class="{{ ul_class }}">
-  {%- for link in site.homepage_links -%}
-    <li><a href="/{{ link }}">/{{ link }}</a></li>
-  {%- endfor -%}
-</ul>
-{%- endif -%}
