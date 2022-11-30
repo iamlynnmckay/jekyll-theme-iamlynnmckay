@@ -17,6 +17,9 @@ show_posts: true
 
 theme: jekyll-theme-iamlynnmckay
 
+# posts permalink
+permalink: /:categories/:title
+
 # minima
 email: iamlynnmckay@gmail.com
 baseurl: "" 
