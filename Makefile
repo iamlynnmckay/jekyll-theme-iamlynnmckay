@@ -1,7 +1,7 @@
 .PHONY: all build clean push serve
 
 NAME := jekyll-theme-iamlynnmckay
-VERSION := 0.0.10
+VERSION := 0.0.11
 
 all: clean build serve
 
