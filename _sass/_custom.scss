@@ -1,0 +1,74 @@
+@charset "utf-8";
+
+/* General styles */
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+img {
+    max-width: 100%;
+}
+
+p,
+ol,
+ul,
+li,
+a {
+    font-size: 10pt;
+}
+
+/* Menu styles */
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu ul {
+    display: inline-block;
+}
+
+.menu ul li a {
+    color: var(--highlight-color);
+    font-size: 15pt;
+}
+
+/* Post styles */
+.posts .tags::before {
+    content: ' ~ ';
+}
+
+/* Tags styles */
+ul.tags,
+ul.tags li {
+    display: inline;
+}
+
+.tags a {
+    color: var(--lowlight-color);
+}
+
+ul.tags li::before {
+    content: '';
+    margin: 0;
+}
+
+ul.tags li::after {
+    content: ' ';
+}
+
+/* Highlighted styles */
+.highlighted {
+    color: var(--highlight-color);
+}
+
+/* Home styles */
+.home div:has(> img) {
+    height: 250px;
+    overflow: hidden;
+}
+
+/* Footer styles */
+footer a {
+    text-decoration: none;
+    font-size: 5pt;
+}

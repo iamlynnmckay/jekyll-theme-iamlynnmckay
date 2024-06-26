@@ -1,0 +1,5 @@
+<ul class="tags">
+    {%- for tag in site.tags -%}
+    <li><a href="/search#{{ tag[0] }}">#{{ tag[0] }}</a></li>
+    {%- endfor -%}
+</ul>

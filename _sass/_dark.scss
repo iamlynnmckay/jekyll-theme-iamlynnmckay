@@ -3,7 +3,7 @@
  */
 
 :root {
-  --base-color: #DBDBDB;
+  --base-color: #FFF;
   --border: dashed 1px rgba(219, 219, 219, 0.9);
   --selection-background: rgba(219, 219, 219, 0.99);
   --selection-text: #000;
@@ -11,6 +11,8 @@
   --text-color: var(--base-color);
   --placeholder-color: var(--base-color);
   --link-color: var(--base-color);
+  --highlight-color: deeppink;
+  --lowlight-color: lightgray;
   --code-color-1: #aaaaaa;
   --code-color-2: #ffffcc;
   --code-color-3: #F00000;

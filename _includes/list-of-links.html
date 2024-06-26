@@ -1,0 +1,31 @@
+{%- if site.data.config.links.size > 0 -%} 
+<ul>
+    <li>
+        <a href="/feed.xml" title="rss feed" type="application/atom+xml">rss feed</a>
+    </li>
+    {%- if site.data.config.links.github.username -%} 
+    <li>
+        <i class="fa-brands fa-instagram"></i>
+        <a href="https://www.instagram.com/{{ site.instagram.username }}/">instagram</a>
+    </li>
+    {%- endif -%} 
+    {%- if site.data.config.links.twitter.username -%} 
+    <li>
+        <i class="fa-brands fa-twitter"></i>
+        <a href="https://www.twitter.com/{{ site.twitter.username }}/">twitter</a>
+    </li>
+    {%- endif -%} 
+    {%- if site.data.config.links.soundcloud.username -%} 
+    <li>
+        <i class="fa-brands fa-soundcloud"></i>
+        <a href="https://soundcloud.com/{{ site.soundcloud.username }}/">soundcloud</a>
+    </li>
+    {%- endif -%} 
+    {%- if site.data.config.links.mixcloud.username -%} 
+    <li>
+        <i class="fa-brands fa-mixcloud"></i>
+        <a href="https://mixcloud.com/{{ site.mixcloud.username }}/">mixcloud</a>
+    </li>
+    {%- endif -%} 
+</ul>
+{%- endif -%} 

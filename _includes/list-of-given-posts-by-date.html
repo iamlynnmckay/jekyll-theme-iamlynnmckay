@@ -1,0 +1,12 @@
+{% assign posts = posts | default: site.posts %}
+{%- if posts.size > 0 -%}
+<ul class="posts">
+    {%- for post in posts -%}
+    <li>
+        {%- assign date_format = "%Y-%m-%d" -%}
+        [ {{ post.date | date: date_format }} ] <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        {%- include list-of-tags-of-post.html post=post -%}
+    </li>
+    {%- endfor -%}
+</ul>
+{%- endif -%}

@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+{%- if site.posts.size > 0 -%} 
+<p>
+    search with ctrl-f
+</p>
+{%- include list-of-site-posts-by-tag.html -%} 
+{%- else -%} 
+nothing here yet, come back later
+{%- endif -%} 

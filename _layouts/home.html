@@ -2,16 +2,28 @@
 layout: default
 ---
 
-{{ content }}
-{% assign contentwonl = content | strip_newlines %} {% unless contentwonl == ""  %} <br /> {% endunless %} <!-- add line break if there is any content -->
-
-{%- if site.posts.size > 0 -%}
-  <ul>
-    {%- for post in site.posts -%}
-    <li>
-      {%- assign date_format = "%Y-%m-%d" -%}
-      [ {{ post.date | date: date_format }} ] <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-    </li>
-    {%- endfor -%}
-  </ul>
-{%- endif -%}
+<div class="home">
+    <br />
+    <div>
+        <img src="{{ site.data.config.home_image }}"></img>
+    </div>
+    <br />
+    <br />
+    <p>{{ site.data.config.description }}</p>
+    {%- if site.data.config.links.size > 0 -%} 
+    <h2>links</h2>
+    {%- include list-of-links.html -%}
+    {%- endif -%} 
+    {%- if site.pages.size > 0 -%} 
+    <h2>pages</h2>
+    {%- include list-of-site-pages.html -%}
+    {%- endif -%} 
+    {%- if site.tags.size > 0 -%} 
+    <h2>tags</h2>
+    {%- include list-of-site-tags.html -%}
+    {%- endif -%} 
+    {%- if site.posts.size > 0 -%} 
+    <h2>posts</h2>
+    {%- include list-of-site-posts-by-date.html -%}
+    {%- endif -%} 
+</div>
