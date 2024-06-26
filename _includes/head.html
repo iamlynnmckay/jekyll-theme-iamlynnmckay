@@ -10,6 +10,8 @@
   <meta http-equiv="refresh" content="0; url={{ page.redirect | relative_url }}">
   {%- endif -%} 
   <title>{{ site.data.config.title }} - {{ page.title }}</title>
+
+  <link rel="icon" type="image/x-icon" href="{{ "/assets/images/favicon.svg" | relative_url }}">
   {%- seo title=false -%} 
   {%- if page.robots -%} 
   <meta name="robots" content="{{ page.robots }}" />
