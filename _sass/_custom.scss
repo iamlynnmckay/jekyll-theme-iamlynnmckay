@@ -72,3 +72,62 @@ footer a {
     text-decoration: none;
     font-size: 5pt;
 }
+
+/* Article styles, used in posts */
+article {
+
+
+h1 {
+counter-reset: h2;
+}
+
+h2:before {
+content: counter(h2)" ";
+counter-increment: h2;
+}
+h2 {
+counter-reset: h3;
+}
+
+h3:before {
+content: counter(h2)"." counter(h3)" ";
+counter-increment: h3;
+}
+h3 {
+counter-reset: h4;
+}
+
+h4:before {
+content: counter(h2)"." counter(h3)"." counter(h4)" ";
+counter-increment: h4;
+}
+h4 {
+counter-reset: h5;
+}
+
+h5:before {
+content: counter(h2)"." counter(h3)"." counter(h4)"." counter(h5)" ";
+counter-increment: h5;
+}
+h5 {
+counter-reset: h6;
+}
+
+h6:before {
+content: counter(h2)"." counter(h3)"." counter(h4)"." counter(h5)"." counter(h6)" ";
+counter-increment: h6;
+}
+h6 {
+counter-reset: h7;
+}
+
+}
+
+/* Override pre and code background colors */
+pre, code {
+    background-color: #1f1f1f;
+}
+
+pre {
+    padding: 5px;
+}
