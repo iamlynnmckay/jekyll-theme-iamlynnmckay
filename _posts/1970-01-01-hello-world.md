@@ -6,4 +6,7 @@ tags: helloworld hello-world
 
 lorem ipsum
 
-{% capture document %}{% include hello-world.md %}{% endcapture %}{{ document | markdownify }}
+{% capture document %}{% include documents/hello-world.md start="##" %}{% endcapture %}
+{% include transclude.html document=document %}
+
+
